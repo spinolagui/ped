@@ -20,6 +20,7 @@
             font-family: Arial, sans-serif;
             color: black;
             text-align: center;
+            overflow: hidden;
         }
 
         .container {
@@ -36,6 +37,10 @@
             cursor: pointer;
         }
 
+        #nao {
+            position: relative;
+        }
+
         #resposta {
             margin-top: 20px;
             font-size: 32px;
@@ -50,7 +55,11 @@
     <div>Queres namorar comigo 2.0?</div>
 
     <button onclick="responderSim()">YES</button>
-    <button onclick="responderNao()">NO</button>
+    <button id="nao"
+            onmouseenter="fugir()"
+            ontouchstart="fugir()">
+        NO
+    </button>
 
     <div id="resposta"></div>
 
@@ -61,8 +70,19 @@
         document.getElementById("resposta").textContent = "YESSSSSS";
     }
 
-    function responderNao() {
-        document.getElementById("resposta").textContent = "O diabo leva-te";
+    function fugir() {
+        const botao = document.getElementById("nao");
+
+        const largura = window.innerWidth - botao.offsetWidth - 20;
+        const altura = window.innerHeight - botao.offsetHeight - 20;
+
+        const x = Math.max(10, Math.random() * largura);
+        const y = Math.max(10, Math.random() * altura);
+
+        botao.style.position = "fixed";
+        botao.style.left = x + "px";
+        botao.style.top = y + "px";
+        botao.style.margin = "0";
     }
 </script>
 
