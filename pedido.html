@@ -1,108 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tenho uma pergunta... 💖</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #ff758c, #ff7eb3);
-      font-family: Arial, sans-serif;
-      text-align: center;
-      color: white;
-    }
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+        }
 
-    .card {
-      background: rgba(255,255,255,0.95);
-      color: #333;
-      padding: 45px 30px;
-      border-radius: 30px;
-      max-width: 500px;
-      margin: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: black;
+            text-align: center;
+        }
 
-    h1 {
-      color: #e63968;
-      font-size: 38px;
-    }
+        .container {
+            font-size: 28px;
+        }
 
-    p {
-      font-size: 22px;
-    }
+        button {
+            background: white;
+            color: black;
+            border: 1px solid black;
+            padding: 10px 25px;
+            margin: 20px 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
 
-    button {
-      padding: 15px 30px;
-      border: none;
-      border-radius: 30px;
-      font-size: 20px;
-      margin: 10px;
-      cursor: pointer;
-    }
-
-    .yes {
-      background: #e63968;
-      color: white;
-    }
-
-    .no {
-      background: #ddd;
-      color: #555;
-    }
-
-    #answer {
-      display: none;
-      font-size: 26px;
-      color: #e63968;
-      margin-top: 25px;
-    }
-  </style>
+        #resposta {
+            margin-top: 20px;
+            font-size: 32px;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="card">
-  <h1>❤️ Tenho uma pergunta para ti ❤️</h1>
+<div class="container">
 
-  <p>
-    Gosto muito de ti...
-  </p>
+    <div>Queres namorar comigo 2.0?</div>
 
-  <p>
-    E queria saber uma coisa:
-  </p>
+    <button onclick="responderSim()">YES</button>
+    <button onclick="responderNao()">NO</button>
 
-  <h1>Queres namorar comigo? 🥰</h1>
+    <div id="resposta"></div>
 
-  <button class="yes" onclick="sim()">
-    SIM ❤️
-  </button>
-
-  <button class="no" onclick="nao()">
-    Não 😢
-  </button>
-
-  <div id="answer"></div>
 </div>
 
 <script>
-  function sim() {
-    document.getElementById("answer").style.display = "block";
-    document.getElementById("answer").innerHTML =
-      "AAAAA! 🥰❤️ Sabia que eras tu! Agora somos oficialmente nós. 💕";
-  }
+    function responderSim() {
+        document.getElementById("resposta").textContent = "YESSSSSS";
+    }
 
-  function nao() {
-    document.getElementById("answer").style.display = "block";
-    document.getElementById("answer").innerHTML =
-      "Essa opção não estava disponível 😌❤️ Tenta novamente!";
-  }
+    function responderNao() {
+        document.getElementById("resposta").textContent = "O diabo leva-te";
+    }
 </script>
 
 </body>
