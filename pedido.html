@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenho uma pergunta... 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.95);
+      color: #333;
+      padding: 45px 30px;
+      border-radius: 30px;
+      max-width: 500px;
+      margin: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #e63968;
+      font-size: 38px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+
+    button {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background: #e63968;
+      color: white;
+    }
+
+    .no {
+      background: #ddd;
+      color: #555;
+    }
+
+    #answer {
+      display: none;
+      font-size: 26px;
+      color: #e63968;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>❤️ Tenho uma pergunta para ti ❤️</h1>
+
+  <p>
+    Gosto muito de ti...
+  </p>
+
+  <p>
+    E queria saber uma coisa:
+  </p>
+
+  <h1>Queres namorar comigo? 🥰</h1>
+
+  <button class="yes" onclick="sim()">
+    SIM ❤️
+  </button>
+
+  <button class="no" onclick="nao()">
+    Não 😢
+  </button>
+
+  <div id="answer"></div>
+</div>
+
+<script>
+  function sim() {
+    document.getElementById("answer").style.display = "block";
+    document.getElementById("answer").innerHTML =
+      "AAAAA! 🥰❤️ Sabia que eras tu! Agora somos oficialmente nós. 💕";
+  }
+
+  function nao() {
+    document.getElementById("answer").style.display = "block";
+    document.getElementById("answer").innerHTML =
+      "Essa opção não estava disponível 😌❤️ Tenta novamente!";
+  }
+</script>
+
+</body>
+</html>
